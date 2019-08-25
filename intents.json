@@ -1,0 +1,337 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "monterrey simulator",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello",
+                        "how are you",
+                        "say hi world",
+                        "say hi",
+                        "hi",
+                        "say hello world",
+                        "say hello"
+                    ]
+                },
+                {
+                    "name": "SituacionIntent",
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "Puedes solicitar conocer la situacion de algun municipio o colonia"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "novedades {lugar}",
+                        "situación {lugar}",
+                        "información {lugar}",
+                        "información de {lugar}",
+                        "novedades de {lugar}",
+                        "situación de {lugar}",
+                        "situación actual de {lugar}",
+                        "situación en  {lugar}",
+                        "cuáles son las novedades en {lugar}",
+                        "cuál es la situacion en {lugar}"
+                    ]
+                },
+                {
+                    "name": "TraficoIntent",
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "Puedes solicitar conocer cuanto trafico hay en algun municipio o colonia"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "tráfico {lugar}",
+                        "tráfico de {lugar}",
+                        "tráfico en {lugar}",
+                        "cómo está el tráfico en {lugar}"
+                    ]
+                },
+                {
+                    "name": "InudacionIntent",
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "Puedes solicitar conocer si ha ocurrido alguna inundacion en algun municipio o colonia"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "inundación {lugar}",
+                        "inundación de {lugar}",
+                        "inundación en {lugar}",
+                        "inundaciónes {lugar}",
+                        "inundaciónes de {lugar}",
+                        "inundaciónes en {lugar}",
+                        "hay inundaciones en {lugar}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "BasuraIntent",
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "Di un lugar donde quieras consultar el nivel de basura"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "basura en {lugar}",
+                        "cuanta basura hay en {lugar}",
+                        "porcentaje de basura en {lugar}"
+                    ]
+                },
+                {
+                    "name": "IncendioIntent",
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "Di un lugar para buscar incendios"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "incendios en {lugar}",
+                        "cuantos incendios hay en {lugar}",
+                        "numero de incendios en {lugar}"
+                    ]
+                },
+                {
+                    "name": "AccidenteIntent",
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "Selecciona un lugar para ver sus accidentes"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "accidentes en {lugar}",
+                        "cuantos accidentes hay en {lugar}",
+                        "número de accidentes en {lugar}"
+                    ]
+                },
+                {
+                    "name": "combatirBasura",
+                    "slots": [],
+                    "samples": [
+                        "recojer la basura",
+                        "reciclar la basura",
+                        "manda camiones de basura"
+                    ]
+                },
+                {
+                    "name": "combatirIncendios",
+                    "slots": [],
+                    "samples": [
+                        "manda los bomberos",
+                        "apaga los incendios",
+                        "combate los incendios"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "SituacionIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.868640173352.97205519861"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TraficoIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.955184548056.1518426090457"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "InudacionIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.696356819447.644886603529"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "BasuraIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.274395233482.311480365985"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "IncendioIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.243546991128.774123121158"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AccidenteIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.635632523637.1430131149813"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.868640173352.1267771682684",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "¿Puedes repetirlo de nuevo?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.868640173352.97205519861",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "No te entendi. Repitelo de nuevo por favor situacion"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.955184548056.1518426090457",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "No te entendi. Repitelo de nuevo por favor trafico"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.696356819447.644886603529",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "No te entendi. Repitelo de nuevo por favor inundacion"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.274395233482.311480365985",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "No te entendi. Intenta de nuevo"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.243546991128.774123121158",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Intenta de nuevo"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.635632523637.1430131149813",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Intentalo de nuevo"
+                    }
+                ]
+            }
+        ]
+    }
+}
